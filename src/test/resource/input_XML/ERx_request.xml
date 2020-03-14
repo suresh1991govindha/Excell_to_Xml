@@ -1,0 +1,27 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schema.walgreens.com/icp/pharm/pharmsigservices/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:PharmSIGServiceWrapperRequest>
+         <OriginalParsedSIGToken>
+            <MiscNotes>937ea49031ff416bb7725070aaf343d7</MiscNotes>
+         </OriginalParsedSIGToken>
+         <TransmittedSIG>1 tab(s) once a week</TransmittedSIG>
+         <DrugType>
+            <DosageFormCd>TABS</DosageFormCd>
+            <DosageFormType>tablet</DosageFormType>
+            <DrugDefaultSig>TK 1 T PO ONCE A WEEK, UTD</DrugDefaultSig>
+	            <DrugStrength>35</DrugStrength>
+            <DrugStrengthUOM>MG</DrugStrengthUOM>
+            <GPI>30042065100330</GPI>
+            <NDC>00591207539</NDC>
+            <RouteOfAdminCodedVal>OR</RouteOfAdminCodedVal>
+            <SingleActiveIngredientInd>S</SingleActiveIngredientInd>
+            <DrugClassType>RX</DrugClassType>
+         </DrugType>
+         <PatientType>
+            <Age>68</Age>
+            <FirstName>PATIENT</FirstName>
+         </PatientType>
+      </v1:PharmSIGServiceWrapperRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
