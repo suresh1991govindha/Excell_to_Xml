@@ -19,11 +19,14 @@ public class BasicReadExcel extends BasicXml{
 		ArrayList<String> column3 = Drug_Sig.getColumn3();
 		ArrayList<String> column4 = Drug_Sig.getColumn4();
 
-		System.out.println(column0);
+		int size = column0.size();
+		
+		System.out.println(size);
+/*		System.out.println(column0);
 		System.out.println(column1);
 		System.out.println(column2);
 		System.out.println(column3);
-		System.out.println(column4);
+		System.out.println(column4);*/
 
 		
 		

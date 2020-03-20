@@ -15,7 +15,7 @@ package Utilities;
 		public ConfigurationManager() throws Throwable {
 			//C:\Users\rockstr\eclipse-workspace\exeeell\config.properties
 			try {
-				File fs = new File("C:\\Users\\rockstr\\eclipse-workspace\\exeeell\\src\\test\\resource\\input_Properties\\config.properties");
+				File fs = new File("C:\\Users\\rockstr\\eclipse-workspace\\exeeell\\src\\test\\resource\\Properties\\config.properties");
 				FileInputStream fileInput = new FileInputStream(fs);
 				ps = new Properties();
 				ps.load(fileInput);
@@ -26,6 +26,18 @@ package Utilities;
 			}
 			
 		}
+		public String getEndpoint() {
+			String endpoint = ps.getProperty("endpoint");
+			if (endpoint==null) {
+				System.out.println("endpoint is Not Found");
+			}
+			return endpoint;
+		}
+		public String getReportConfigPath(){
+			 String reportConfigPath = ps.getProperty("reportConfigPath");
+			 if(reportConfigPath!= null) return reportConfigPath;
+			 else throw new RuntimeException("Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath"); 
+			}
 		public String getIn_XMLpath() {
 			String xml_Input_path = ps.getProperty("xml_Input_path");
 			if (xml_Input_path==null) {
@@ -142,5 +154,12 @@ package Utilities;
 			}
 			return Column10;
 		}
-		}
+		
+		public String getColumn11() {
+			String Column11 = ps.getProperty("Column11");
+			if (Column11==null) {
+				System.out.println("Column11 is Not Found");
+			}
+			return Column11;
+		}		}
 

@@ -26,7 +26,7 @@ import Utilities.FileReadManager;
 			  String excellpath = FileReadManager.getInstance().getCr().getExcellpath();
 			  String getsheetname = FileReadManager.getInstance().getCr().getsheetname();
 			  String column0 = FileReadManager.getInstance().getCr().getColumn0();
-			String column_name="DosageFormCd";
+			
 		//HashMap< Integer,String> map=new HashMap<Integer, String>();
 			
 			
