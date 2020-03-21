@@ -33,7 +33,7 @@ public class TestRunner {
 
 		
 			int count = FileOperation.getRequestCount();
-			String in_XMLpath = FileReadManager.getInstance().getCr().getIn_XMLpath();
+		
 			for (int i = 0; i < count; i++) {
 				
 		    String endpoint = FileReadManager.getInstance().getCr().getEndpoint();

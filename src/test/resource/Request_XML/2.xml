@@ -3,7 +3,7 @@
    <soapenv:Body>
       <tem:Add>
          <tem:a>?</tem:a>
-         <tem:b>20</tem:b>
+         <tem:b>?</tem:b>
       </tem:Add>
    </soapenv:Body>
 </soapenv:Envelope>

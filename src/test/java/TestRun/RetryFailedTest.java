@@ -25,7 +25,7 @@ public class RetryFailedTest {
 	public  void TestRun() throws Throwable {
 	
 		String endpoint = FileReadManager.getInstance().getCr().getEndpoint();
-		String in_XMLpath = FileReadManager.getInstance().getCr().getIn_XMLpath();
+		String in_XMLpath = FileReadManager.getInstance().getCr().getResponse_XML();
 		
 		
 		 File[] failedXMLCount = FileOperation.getFailedXMLCount();
@@ -76,9 +76,9 @@ public class RetryFailedTest {
 		{
 			sb.append( line);
 		}
-		PrintWriter pw=new PrintWriter(in_XMLpath);
+		//PrintWriter pw=new PrintWriter(in_XMLpath);
 		
-	//	PrintWriter pw=new PrintWriter(System.getProperty("user.dir")+"\\src\\test\\resource\\Response_XML\\Reponse.xml");
+		PrintWriter pw=new PrintWriter(System.getProperty("user.dir")+"\\src\\test\\resource\\Response_XML\\Reponse"+i+".xml");
 		pw.write(sb.toString());
 		pw.close();
 		pw.flush();

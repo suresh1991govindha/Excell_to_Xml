@@ -33,9 +33,11 @@ public class BasicXml {
 	
     public static void main(String[] args) throws Throwable {
     	
-    	String in_XMLpath = FileReadManager.getInstance().getCr().getIn_XMLpath();
-    	String out_XMLpath = FileReadManager.getInstance().getCr().getOut_XMLpath();
-        
+    	String in_XMLpath = FileReadManager.getInstance().getCr().getin_XMLpath();
+    	String out_XMLpath = FileReadManager.getInstance().getCr().getResponse_XML();
+    	
+    	
+    	
         File xmlFile = new File(in_XMLpath);
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder;

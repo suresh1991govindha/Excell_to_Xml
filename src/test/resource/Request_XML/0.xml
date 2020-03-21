@@ -2,8 +2,8 @@
    <soapenv:Header/>
    <soapenv:Body>
       <tem:Add>
-         <tem:a>?</tem:a>
-         <tem:b>?</tem:b>
+         <tem:a>10</tem:a>
+         <tem:b>10</tem:b>
       </tem:Add>
    </soapenv:Body>
 </soapenv:Envelope>

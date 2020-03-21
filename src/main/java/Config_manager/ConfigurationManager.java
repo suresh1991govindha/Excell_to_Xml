@@ -33,25 +33,30 @@ package Config_manager;
 			}
 			return endpoint;
 		}
-		public String getReportConfigPath(){
-			 String reportConfigPath = ps.getProperty("reportConfigPath");
-			 if(reportConfigPath!= null) return reportConfigPath;
-			 else throw new RuntimeException("Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath"); 
+
+		
+		public String getin_XMLpath() {
+			String in_XMLpath = ps.getProperty("in_XMLpath");
+			if (in_XMLpath==null) {
+				System.out.println("in_XMLpath is Not Found");
 			}
-		public String getIn_XMLpath() {
-			String xml_Input_path = ps.getProperty("xml_Input_path");
-			if (xml_Input_path==null) {
-				System.out.println("xml_Input_path is Not Found");
-			}
-			return xml_Input_path;
+			return in_XMLpath;
 		}
 		
-		public String getOut_XMLpath() {
-			String xml_Output_path = ps.getProperty("xml_Output_path");
-			if (xml_Output_path==null) {
-				System.out.println("xml_Output_path is Not Found");
+		public String getResponse_XML() {
+			String Response_XML = ps.getProperty("Response_XML");
+			if (Response_XML==null) {
+				System.out.println("Response_XML is Not Found");
 			}
-			return xml_Output_path;
+			return Response_XML;
+		}
+		
+		public String getRequest_XML() {
+			String Request_XML = ps.getProperty("Request_XML");
+			if (Request_XML==null) {
+				System.out.println("Request_XML is Not Found");
+			}
+			return Request_XML;
 		}
 		public String getExcellpath() {
 			String Excellpath = ps.getProperty("Excellpath");
