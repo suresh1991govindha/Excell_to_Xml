@@ -25,7 +25,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import Config_manager.FileReadManager;
-import Excel_Manager.Drug_Sig;
+import Excel_Manager.Read_Column;
 import Utils_Manager.FileOperation;
 
 
@@ -66,16 +66,18 @@ public class BasicXml {
             DOMSource source = new DOMSource(doc);
             
             
-            ArrayList<String> column0 = Drug_Sig.getColumn0();
-            ArrayList<String> column1 = Drug_Sig.getColumn1();
-            ArrayList<String> column2 = Drug_Sig.getColumn2();
-            ArrayList<String> column3 = Drug_Sig.getColumn3();
-            ArrayList<String> column4 = Drug_Sig.getColumn4();
-            ArrayList<String> column5 = Drug_Sig.getColumn5();
-            ArrayList<String> column6 = Drug_Sig.getColumn6();            
-            ArrayList<String> column7 = Drug_Sig.getColumn7();
-            ArrayList<String> column8 = Drug_Sig.getColumn8();            
+            ArrayList<String> column0 = Read_Column.getColumn0();
+            ArrayList<String> column1 = Read_Column.getColumn1();
+            ArrayList<String> column2 = Read_Column.getColumn2();
+            ArrayList<String> column3 = Read_Column.getColumn3();
+            ArrayList<String> column4 = Read_Column.getColumn4();
+            ArrayList<String> column5 = Read_Column.getColumn5();
+            ArrayList<String> column6 = Read_Column.getColumn6();            
+            ArrayList<String> column7 = Read_Column.getColumn7();
+            ArrayList<String> column8 = Read_Column.getColumn8();            
             
+            ArrayList<String> column9 = Read_Column.getColumn9();
+         
             
             for (int i = 0; i < column0.size(); i++) {
             	String st0 = column0.get(i);
@@ -87,8 +89,11 @@ public class BasicXml {
             	String st6 = column6.get(i);
             	String st7 = column7.get(i);
             	String st8 = column8.get(i);
+            	String st9 = column9.get(i);
+            	;
             	
-            	 updateElementValue(doc,st0,st1,st2,st3,st4,st5,st6,st7,st8);
+            	
+            	 updateElementValue(doc,st0,st1,st2,st3,st4,st5,st6,st7,st8,st9);
             StreamResult result = new StreamResult(new File(out_XMLpath+i+".xml"));
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.transform(source, result);
@@ -131,7 +136,7 @@ public class BasicXml {
         
     }
 
-    private static void updateElementValue(Document doc,String st0,String st1,String st2,String st3,String st4,String st5,String st6,String st7,String st8) throws Throwable {
+    private static void updateElementValue(Document doc,String st0,String st1,String st2,String st3,String st4,String st5,String st6,String st7,String st8,String st9) throws Throwable {
     	
         NodeList employees = doc.getElementsByTagName("DrugType");
         Element emp = null;
@@ -169,7 +174,7 @@ public class BasicXml {
             SingleActiveIngredientInd.setNodeValue(st8);
             
             Node DrugClassType = emp.getElementsByTagName("DrugClassType").item(0).getFirstChild();
-            DrugClassType.setNodeValue("crocin9");
+            DrugClassType.setNodeValue(st9);
        
 	       
           
