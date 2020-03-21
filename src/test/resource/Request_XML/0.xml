@@ -9,14 +9,14 @@
          <TransmittedSIG>1 tab(s) once a week</TransmittedSIG>
          <DrugType>
             <DosageFormCd>59749</DosageFormCd>
-            <DosageFormType>241635</DosageFormType>
-            <DrugDefaultSig>59749002380</DrugDefaultSig>
-	            <DrugStrength>675662</DrugStrength>
+            <DosageFormType>120226</DosageFormType>
+            <DrugDefaultSig>59749001784</DrugDefaultSig>
+	            <DrugStrength>670036</DrugStrength>
             <DrugStrengthUOM>RX</DrugStrengthUOM>
             <GPI> </GPI>
-            <NDC> </NDC>
-            <RouteOfAdminCodedVal>32043971050</RouteOfAdminCodedVal>
-            <SingleActiveIngredientInd>1</SingleActiveIngredientInd>
+            <NDC>G</NDC>
+            <RouteOfAdminCodedVal>59908000203</RouteOfAdminCodedVal>
+            <SingleActiveIngredientInd>0</SingleActiveIngredientInd>
             <DrugClassType>crocin9</DrugClassType>
          </DrugType>
          <PatientType>

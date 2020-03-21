@@ -26,6 +26,7 @@ import org.xml.sax.SAXException;
 
 import Config_manager.FileReadManager;
 import Excel_Manager.Drug_Sig;
+import Utils_Manager.FileOperation;
 
 
 
@@ -34,7 +35,7 @@ public class BasicXml {
     public static void main(String[] args) throws Throwable {
     	
     	String in_XMLpath = FileReadManager.getInstance().getCr().getin_XMLpath();
-    	String out_XMLpath = FileReadManager.getInstance().getCr().getResponse_XML();
+    	String out_XMLpath = FileReadManager.getInstance().getCr().getRequest_XML();
     	
     	
     	
@@ -70,6 +71,11 @@ public class BasicXml {
             ArrayList<String> column2 = Drug_Sig.getColumn2();
             ArrayList<String> column3 = Drug_Sig.getColumn3();
             ArrayList<String> column4 = Drug_Sig.getColumn4();
+            ArrayList<String> column5 = Drug_Sig.getColumn5();
+            ArrayList<String> column6 = Drug_Sig.getColumn6();            
+            ArrayList<String> column7 = Drug_Sig.getColumn7();
+            ArrayList<String> column8 = Drug_Sig.getColumn8();            
+            
             
             for (int i = 0; i < column0.size(); i++) {
             	String st0 = column0.get(i);
@@ -77,8 +83,12 @@ public class BasicXml {
             	String st2 = column2.get(i);
             	String st3 = column3.get(i);
             	String st4 = column4.get(i);
+            	String st5 = column5.get(i);
+            	String st6 = column6.get(i);
+            	String st7 = column7.get(i);
+            	String st8 = column8.get(i);
             	
-            	 updateElementValue(doc, st0,st1,st2,st3,st4);
+            	 updateElementValue(doc,st0,st1,st2,st3,st4,st5,st6,st7,st8);
             StreamResult result = new StreamResult(new File(out_XMLpath+i+".xml"));
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.transform(source, result);
@@ -87,6 +97,10 @@ public class BasicXml {
             //System.out.println(out_XMLpath);
         
             System.out.println("file updated successfully =====> "+out_XMLpath);
+            
+            int requestCount = FileOperation.getRequestCount();
+            
+            System.err.println("Total Request XML's  =====> "+requestCount);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -117,7 +131,7 @@ public class BasicXml {
         
     }
 
-    private static void updateElementValue(Document doc,String st0,String st1,String st2,String st3,String st4) throws Throwable {
+    private static void updateElementValue(Document doc,String st0,String st1,String st2,String st3,String st4,String st5,String st6,String st7,String st8) throws Throwable {
     	
         NodeList employees = doc.getElementsByTagName("DrugType");
         Element emp = null;
@@ -142,17 +156,17 @@ public class BasicXml {
             DrugStrengthUOM.setNodeValue(st4);
           
             Node GPI = emp.getElementsByTagName("GPI").item(0).getFirstChild();
-            GPI.setNodeValue("crocin6");
+            GPI.setNodeValue(st5);
             
             Node NDC = emp.getElementsByTagName("NDC").item(0).getFirstChild();
-            NDC.setNodeValue("crocin7");
+            NDC.setNodeValue(st6);
             
             
             Node RouteOfAdminCodedVal = emp.getElementsByTagName("RouteOfAdminCodedVal").item(0).getFirstChild();
-            RouteOfAdminCodedVal.setNodeValue("crocin8");
+            RouteOfAdminCodedVal.setNodeValue(st7);
             
             Node SingleActiveIngredientInd = emp.getElementsByTagName("SingleActiveIngredientInd").item(0).getFirstChild();
-            SingleActiveIngredientInd.setNodeValue("crocin9");
+            SingleActiveIngredientInd.setNodeValue(st8);
             
             Node DrugClassType = emp.getElementsByTagName("DrugClassType").item(0).getFirstChild();
             DrugClassType.setNodeValue("crocin9");

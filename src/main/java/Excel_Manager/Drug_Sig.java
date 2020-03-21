@@ -75,10 +75,19 @@ import Config_manager.FileReadManager;
 					
 				String stringCellValue = r.getCell(column).getStringCellValue();
 				//System.out.println(stringCellValue);
+				if(stringCellValue.equalsIgnoreCase(" ")){
+					list.add(" ");
+				}if(stringCellValue.equalsIgnoreCase("0")) {
+				
+					list.add("0");
+				}else {
+			
 				list.add(stringCellValue);
+					}
+
 				}else {
 
-					 double numericCellValue = r.getCell(column).getNumericCellValue();
+					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
 					 list.add(String.valueOf(numericCellValue));
 					// System.out.println(numericCellValue);
 					 
@@ -140,11 +149,19 @@ import Config_manager.FileReadManager;
 				{
 				
 			String stringCellValue = r.getCell(column).getStringCellValue();
-			//System.out.println(stringCellValue);
+			if(stringCellValue.equalsIgnoreCase(" ")){
+				list.add(" ");
+			}if(stringCellValue.equalsIgnoreCase("0")) {
+			
+				list.add("0");
+			}else {
+		
 			list.add(stringCellValue);
+				}
+
 			}else {
 
-				 double numericCellValue = r.getCell(column).getNumericCellValue();
+				 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
 				 list.add(String.valueOf(numericCellValue));
 				// System.out.println(numericCellValue);
 				 
@@ -206,11 +223,19 @@ import Config_manager.FileReadManager;
 				{
 				
 			String stringCellValue = r.getCell(column).getStringCellValue();
-			//System.out.println(stringCellValue);
+			if(stringCellValue.equalsIgnoreCase(" ")){
+				list.add(" ");
+			}if(stringCellValue.equalsIgnoreCase("0")) {
+			
+				list.add("0");
+			}else {
+		
 			list.add(stringCellValue);
+				}
+
 			}else {
 
-				 double numericCellValue = r.getCell(column).getNumericCellValue();
+				 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
 				 list.add(String.valueOf(numericCellValue));
 				// System.out.println(numericCellValue);
 				 
@@ -274,11 +299,19 @@ import Config_manager.FileReadManager;
 					{
 					
 				String stringCellValue = r.getCell(column).getStringCellValue();
-				//System.out.println(stringCellValue);
+				if(stringCellValue.equalsIgnoreCase(" ")){
+					list.add(" ");
+				}if(stringCellValue.equalsIgnoreCase("0")) {
+				
+					list.add("0");
+				}else {
+			
 				list.add(stringCellValue);
+					}
+
 				}else {
 
-					 double numericCellValue = r.getCell(column).getNumericCellValue();
+					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
 					 list.add(String.valueOf(numericCellValue));
 					// System.out.println(numericCellValue);
 					 
@@ -342,11 +375,19 @@ import Config_manager.FileReadManager;
 							{
 							
 						String stringCellValue = r.getCell(column).getStringCellValue();
-						//System.out.println(stringCellValue);
+						if(stringCellValue.equalsIgnoreCase(" ")){
+							list.add(" ");
+						}if(stringCellValue.equalsIgnoreCase("0")) {
+						
+							list.add("0");
+						}else {
+					
 						list.add(stringCellValue);
+							}
+
 						}else {
 
-							 double numericCellValue = r.getCell(column).getNumericCellValue();
+							 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
 							 list.add(String.valueOf(numericCellValue));
 							// System.out.println(numericCellValue);
 							 
@@ -406,15 +447,28 @@ import Config_manager.FileReadManager;
 				while(rows.hasNext())
 				{
 					Row r = rows.next();
-					if(r.getCell(column).getCellTypeEnum()==CellType.STRING)
+				
+					
+				
+						
+				 if(r.getCell(column).getCellTypeEnum()==CellType.STRING )
 					{
 					
 				String stringCellValue = r.getCell(column).getStringCellValue();
-				//System.out.println(stringCellValue);
+			//	System.out.println(stringCellValue);
+				if(stringCellValue.equalsIgnoreCase(" ")){
+					list.add(" ");
+				}if(stringCellValue.equalsIgnoreCase("0")) {
+				
+					list.add("0");
+				}else {
+			
 				list.add(stringCellValue);
+					}
+
 				}else {
 
-					 double numericCellValue = r.getCell(column).getNumericCellValue();
+					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
 					 list.add(String.valueOf(numericCellValue));
 					// System.out.println(numericCellValue);
 					 
@@ -477,11 +531,19 @@ import Config_manager.FileReadManager;
 					{
 					
 				String stringCellValue = r.getCell(column).getStringCellValue();
-				//System.out.println(stringCellValue);
+				if(stringCellValue.equalsIgnoreCase(" ")){
+					list.add(" ");
+				}if(stringCellValue.equalsIgnoreCase("0")) {
+				
+					list.add("0");
+				}else {
+			
 				list.add(stringCellValue);
+					}
+
 				}else {
 
-					 double numericCellValue = r.getCell(column).getNumericCellValue();
+					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
 					 list.add(String.valueOf(numericCellValue));
 					// System.out.println(numericCellValue);
 					 
@@ -544,11 +606,19 @@ import Config_manager.FileReadManager;
 					{
 					
 				String stringCellValue = r.getCell(column).getStringCellValue();
-				//System.out.println(stringCellValue);
+				if(stringCellValue.equalsIgnoreCase(" ")){
+					list.add(" ");
+				}if(stringCellValue.equalsIgnoreCase("0")) {
+				
+					list.add("0");
+				}else {
+			
 				list.add(stringCellValue);
+					}
+
 				}else {
 
-					 double numericCellValue = r.getCell(column).getNumericCellValue();
+					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
 					 list.add(String.valueOf(numericCellValue));
 					// System.out.println(numericCellValue);
 					 
@@ -612,11 +682,20 @@ import Config_manager.FileReadManager;
 					{
 					
 				String stringCellValue = r.getCell(column).getStringCellValue();
-				//System.out.println(stringCellValue);
+				System.out.println(stringCellValue);
+				if(stringCellValue.equalsIgnoreCase(" ")){
+					list.add(" ");
+				}if(stringCellValue.equalsIgnoreCase("0")) {
+				
+					list.add("0");
+				}else {
+			
 				list.add(stringCellValue);
+					}
+
 				}else {
 
-					 double numericCellValue = r.getCell(column).getNumericCellValue();
+					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
 					 list.add(String.valueOf(numericCellValue));
 					// System.out.println(numericCellValue);
 					 
@@ -679,11 +758,19 @@ import Config_manager.FileReadManager;
 					{
 					
 				String stringCellValue = r.getCell(column).getStringCellValue();
-				//System.out.println(stringCellValue);
+				if(stringCellValue.equalsIgnoreCase(" ")){
+					list.add(" ");
+				}if(stringCellValue.equalsIgnoreCase("0")) {
+				
+					list.add("0");
+				}else {
+			
 				list.add(stringCellValue);
+					}
+
 				}else {
 
-					 double numericCellValue = r.getCell(column).getNumericCellValue();
+					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
 					 list.add(String.valueOf(numericCellValue));
 					// System.out.println(numericCellValue);
 					 
