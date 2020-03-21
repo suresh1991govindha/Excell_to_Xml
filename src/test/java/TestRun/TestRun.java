@@ -12,6 +12,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.InputStreamEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -48,16 +49,21 @@ public class TestRun {
 			HttpResponse reponse=client.execute(post);
 			
 			int statusCode = reponse.getStatusLine().getStatusCode();
-			
+		
 			if(statusCode==200)
 			{
-			System.out.println(i+".xml  status code = " +statusCode+ " PASS");
-			
+			System.out.println("["+i+".xml ] STATUS= " +statusCode+ " PASS");
 			}else {
 			
-				System.out.println(i+".xml  status code = " +statusCode+ " FAIL");
+				
+				Reporter.log("["+i+".xml ] STATUS = " +statusCode+ " FAIL");
 				
 			}
+		
+			
+			 
+		        
+		      
 			BufferedReader br=new BufferedReader(new InputStreamReader(reponse.getEntity().getContent()));
 			String line=" ";
 			
