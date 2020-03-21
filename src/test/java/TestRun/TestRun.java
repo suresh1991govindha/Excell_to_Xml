@@ -56,8 +56,11 @@ public class TestRun {
 			}else {
 			
 				
-				Reporter.log("["+i+".xml ] STATUS = " +statusCode+ " FAIL");
+				String failedXML=System.getProperty("user.dir")+"\\src\\test\\resource\\Failed_XML\\"+i+".xml";
+				Reporter.log(failedXML);
 				
+				System.out.print("["+i+".xml ] STATUS= " +statusCode);	UTIL.copyFailedXML(requestfile,i);
+			//	System.out.println(requestfile);
 			}
 		
 			
