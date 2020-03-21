@@ -15,7 +15,7 @@ package Config_manager;
 		public ConfigurationManager() throws Throwable {
 			//C:\Users\rockstr\eclipse-workspace\exeeell\config.properties
 			try {
-				File fs = new File("C:\\Users\\rockstr\\eclipse-workspace\\exeeell\\src\\test\\resource\\Properties\\config.properties");
+				File fs = new File(System.getProperty("user.dir")+"\\config.properties");
 				FileInputStream fileInput = new FileInputStream(fs);
 				ps = new Properties();
 				ps.load(fileInput);
