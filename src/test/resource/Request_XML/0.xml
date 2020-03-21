@@ -2,7 +2,7 @@
    <soapenv:Header/>
    <soapenv:Body>
       <tem:Add>
-         <tem:a>10</tem:a>
+         <tem:a>?</tem:a>
          <tem:b>20</tem:b>
       </tem:Add>
    </soapenv:Body>

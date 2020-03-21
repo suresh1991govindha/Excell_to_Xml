@@ -1,4 +1,4 @@
-package XML_update;
+package XML_Manager;
 
 
 
@@ -24,8 +24,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import Excell_Column_Read.Drug_Sig;
-import Utilities.FileReadManager;
+import Config_manager.FileReadManager;
+import Excel_Manager.Drug_Sig;
 
 
 

@@ -1,9 +1,9 @@
-package Excell_Column_Read;
+package Excel_Manager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import XML_update.BasicXml;
+import XML_Manager.BasicXml;
 
 public class BasicReadExcel extends BasicXml{
 

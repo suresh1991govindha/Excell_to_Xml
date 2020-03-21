@@ -19,7 +19,11 @@
   <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
 
   <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
-  
+  <dependency>
+      <groupId>org.fusesource.jansi</groupId>
+      <artifactId>jansi</artifactId>
+      <version>1.11</version>
+    </dependency>
   <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 <dependency>
     <groupId>org.apache.poi</groupId>

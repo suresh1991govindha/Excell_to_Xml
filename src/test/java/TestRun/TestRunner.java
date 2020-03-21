@@ -18,10 +18,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import Utilities.FileReadManager;
-import XML_update.BasicXml;
+import Config_manager.FileReadManager;
+import Utils_Manager.FileOperation;
+import XML_Manager.BasicXml;
 
-public class TestRun {
+public class TestRunner {
 
 
 
@@ -31,7 +32,7 @@ public class TestRun {
 		
 
 		
-			int count = UTIL.getRequestCount();
+			int count = FileOperation.getRequestCount();
 			String in_XMLpath = FileReadManager.getInstance().getCr().getIn_XMLpath();
 			for (int i = 0; i < count; i++) {
 				
@@ -59,7 +60,7 @@ public class TestRun {
 				String failedXML=System.getProperty("user.dir")+"\\src\\test\\resource\\Failed_XML\\"+i+".xml";
 				Reporter.log(failedXML);
 				
-				System.out.print("["+i+".xml ] STATUS= " +statusCode);	UTIL.copyFailedXML(requestfile,i);
+				System.err.print("["+i+".xml ] STATUS= " +statusCode);	FileOperation.moveFailedXML(requestfile,i);
 			//	System.out.println(requestfile);
 			}
 		

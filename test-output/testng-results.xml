@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\1.xml]]>
+      <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\0.xml]]>
+    </line>
+    <line>
+      <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\2.xml]]>
+    </line>
+    <line>
+      <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\4.xml]]>
     </line>
     <line>
       <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\5.xml]]>
     </line>
-    <line>
-      <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\6.xml]]>
-    </line>
-    <line>
-      <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\7.xml]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5348" started-at="2020-03-21T03:13:06Z" finished-at="2020-03-21T03:13:11Z">
+  <suite name="Default suite" duration-ms="8346" started-at="2020-03-21T04:31:35Z" finished-at="2020-03-21T04:31:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5348" started-at="2020-03-21T03:13:06Z" finished-at="2020-03-21T03:13:11Z">
+    <test name="Default test" duration-ms="8346" started-at="2020-03-21T04:31:35Z" finished-at="2020-03-21T04:31:43Z">
       <class name="TestRun.RetryFailedTest">
-        <test-method status="PASS" signature="TestRun()[pri:0, instance:TestRun.RetryFailedTest@3884b2]" name="TestRun" duration-ms="5320" started-at="2020-03-21T03:13:06Z" finished-at="2020-03-21T03:13:11Z">
+        <test-method status="PASS" signature="TestRun()[pri:0, instance:TestRun.RetryFailedTest@1832929]" name="TestRun" duration-ms="8316" started-at="2020-03-21T04:31:35Z" finished-at="2020-03-21T04:31:43Z">
           <reporter-output>
             <line>
-              <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\1.xml]]>
+              <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\0.xml]]>
+            </line>
+            <line>
+              <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\2.xml]]>
+            </line>
+            <line>
+              <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\4.xml]]>
             </line>
             <line>
               <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\5.xml]]>
-            </line>
-            <line>
-              <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\6.xml]]>
-            </line>
-            <line>
-              <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\7.xml]]>
             </line>
           </reporter-output>
         </test-method> <!-- TestRun -->

@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -13,8 +14,10 @@ import org.apache.http.entity.InputStreamEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+import org.testng.internal.Utils;
 
-import Utilities.FileReadManager;
+import Config_manager.FileReadManager;
+import Utils_Manager.FileOperation;
 
 public class RetryFailedTest {
 
@@ -25,7 +28,7 @@ public class RetryFailedTest {
 		String in_XMLpath = FileReadManager.getInstance().getCr().getIn_XMLpath();
 		
 		
-		 File[] failedXMLCount = UTIL.getFailedXMLCount();
+		 File[] failedXMLCount = FileOperation.getFailedXMLCount();
 		
 		for (int i = 0; i < failedXMLCount.length; i++) {
 			
@@ -47,13 +50,16 @@ public class RetryFailedTest {
 		if(statusCode==200)
 		{
 		System.out.println("["+failedXMLCount[i]+" ] STATUS= " +statusCode+ " PASS");
+		
+	
+		
 		}else {
 		
 			File failedXML = failedXMLCount[i];
 			String absolutePath = failedXML.getAbsolutePath();
 			Reporter.log(absolutePath);
 			
-		System.out.println("["+failedXMLCount[i]+" ] STATUS= " +statusCode+ " FAIL");
+		System.err.println("["+failedXMLCount[i]+" ] STATUS= " +statusCode+ " FAIL");
 		
 		}
 	

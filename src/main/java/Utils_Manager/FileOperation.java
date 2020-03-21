@@ -1,4 +1,4 @@
-package TestRun;
+package Utils_Manager;
 
 import java.io.File;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import org.apache.commons.io.FileUtils;
 import org.testng.annotations.Test;
 
 
-public class UTIL {
+public class FileOperation {
 
 	
 	public  static int getRequestCount()
@@ -50,7 +50,7 @@ public static  void deleteOutputXml()
 	}
 	}
 	  
-public static  void copyFailedXML(File src,int i) throws IOException
+public static  void moveFailedXML(File src,int i) throws IOException
 
 {
 	
@@ -58,7 +58,7 @@ public static  void copyFailedXML(File src,int i) throws IOException
 	
 	
 	 FileUtils.copyFile(src, des);
-	 System.out.println(" FAIL RESPONSE STORED SUCCESSFULLY --->> "+des);
+	 System.err.println(" FAIL RESPONSE STORED SUCCESSFULLY --->> "+des);
 	}
 
 
