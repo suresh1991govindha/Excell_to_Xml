@@ -20,7 +20,7 @@ import org.testng.asserts.SoftAssert;
 
 import Config_manager.FileReadManager;
 import Utils_Manager.FileOperation;
-import XML_Manager.BasicXml;
+import XML_Manager.Excel_BasicXml;
 
 public class TestRunner {
 

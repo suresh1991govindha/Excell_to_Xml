@@ -410,13 +410,13 @@ import Config_manager.FileReadManager;
 					{
 					
 				String stringCellValue = r.getCell(column).getStringCellValue();
-				System.out.println("getColumn5"+stringCellValue);
+			//	System.out.println("getColumn5"+stringCellValue);
 				list.add(stringCellValue);
 				}else {
 
 					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
 					 list.add(String.valueOf(numericCellValue));
-					 System.out.println("getColumn5"+numericCellValue);
+				//	 System.out.println("getColumn5"+numericCellValue);
 					 
 					 
 				}
@@ -477,13 +477,13 @@ import Config_manager.FileReadManager;
 					{
 					
 				String stringCellValue = r.getCell(column).getStringCellValue();
-				System.out.println("getColumn6"+stringCellValue);
+			///	System.out.println("getColumn6"+stringCellValue);
 				list.add(stringCellValue);
 				}else {
 
 					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
 					 list.add(String.valueOf(numericCellValue));
-					System.out.println("getColumn6"+numericCellValue);
+			//		System.out.println("getColumn6"+numericCellValue);
 					 
 					 
 				}

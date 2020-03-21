@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3260" started-at="2020-03-21T10:16:09Z" finished-at="2020-03-21T10:16:12Z">
+  <suite name="Default suite" duration-ms="6" started-at="2020-03-21T18:27:47Z" finished-at="2020-03-21T18:27:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3260" started-at="2020-03-21T10:16:09Z" finished-at="2020-03-21T10:16:12Z">
-      <class name="TestRun.RetryFailedTest">
-        <test-method status="PASS" signature="TestRun()[pri:0, instance:TestRun.RetryFailedTest@1fc5af1]" name="TestRun" duration-ms="3230" started-at="2020-03-21T10:16:09Z" finished-at="2020-03-21T10:16:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestRun -->
-      </class> <!-- TestRun.RetryFailedTest -->
+    <test name="Default test" duration-ms="6" started-at="2020-03-21T18:27:47Z" finished-at="2020-03-21T18:27:47Z">
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

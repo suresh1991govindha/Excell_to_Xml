@@ -8,16 +8,16 @@
          </OriginalParsedSIGToken>
          <TransmittedSIG>1 tab(s) once a week</TransmittedSIG>
          <DrugType>
-            <DosageFormCd>59749</DosageFormCd>
-            <DosageFormType>241634</DosageFormType>
-            <DrugDefaultSig>59749002380</DrugDefaultSig>
-	            <DrugStrength>666197</DrugStrength>
-            <DrugStrengthUOM>RX</DrugStrengthUOM>
-            <GPI>%</GPI>
-            <NDC>0</NDC>
-            <RouteOfAdminCodedVal>32043971050</RouteOfAdminCodedVal>
-            <SingleActiveIngredientInd>59749</SingleActiveIngredientInd>
-            <DrugClassType>JAMD0   </DrugClassType>
+            <DosageFormCd>1</DosageFormCd>
+            <DosageFormType>suresh</DosageFormType>
+            <DrugDefaultSig>28</DrugDefaultSig>
+	            <DrugStrength>chennai</DrugStrength>
+            <DrugStrengthUOM>9790880305</DrugStrengthUOM>
+            <GPI>software</GPI>
+            <NDC>45000</NDC>
+            <RouteOfAdminCodedVal>ramakrishnan</RouteOfAdminCodedVal>
+            <SingleActiveIngredientInd>sumathi</SingleActiveIngredientInd>
+            <DrugClassType>photography</DrugClassType>
          </DrugType>
          <PatientType>
             <Age>68</Age>

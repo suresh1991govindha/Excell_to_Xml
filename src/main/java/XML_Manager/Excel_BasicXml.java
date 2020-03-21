@@ -30,16 +30,15 @@ import Utils_Manager.FileOperation;
 
 
 
-public class BasicXml {
+public class Excel_BasicXml {
 	
     public static void main(String[] args) throws Throwable {
     	
-    	String in_XMLpath = FileReadManager.getInstance().getCr().getin_XMLpath();
+    
     	String out_XMLpath = FileReadManager.getInstance().getCr().getRequest_XML();
-    	
-    	
-    	
-        File xmlFile = new File(in_XMLpath);
+    
+    	String in_XMLpath = FileReadManager.getInstance().getCr().getin_XMLpath();
+    	File xmlFile = new File(in_XMLpath);
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder;
         try {
