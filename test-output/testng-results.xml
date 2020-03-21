@@ -5,19 +5,19 @@
       <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\2.xml]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1841" started-at="2020-03-21T05:12:31Z" finished-at="2020-03-21T05:12:33Z">
+  <suite name="Default suite" duration-ms="3021" started-at="2020-03-21T07:33:49Z" finished-at="2020-03-21T07:33:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1841" started-at="2020-03-21T05:12:31Z" finished-at="2020-03-21T05:12:33Z">
-      <class name="TestRun.RetryFailedTest">
-        <test-method status="PASS" signature="TestRun()[pri:0, instance:TestRun.RetryFailedTest@1832929]" name="TestRun" duration-ms="1812" started-at="2020-03-21T05:12:31Z" finished-at="2020-03-21T05:12:33Z">
+    <test name="Default test" duration-ms="3021" started-at="2020-03-21T07:33:49Z" finished-at="2020-03-21T07:33:52Z">
+      <class name="TestRun.TestRunner">
+        <test-method status="PASS" signature="TestRun()[pri:0, instance:TestRun.TestRunner@1fc5af1]" name="TestRun" duration-ms="2994" started-at="2020-03-21T07:33:49Z" finished-at="2020-03-21T07:33:52Z">
           <reporter-output>
             <line>
               <![CDATA[C:\Users\rockstr\eclipse-workspace\exeeell\src\test\resource\Failed_XML\2.xml]]>
             </line>
           </reporter-output>
         </test-method> <!-- TestRun -->
-      </class> <!-- TestRun.RetryFailedTest -->
+      </class> <!-- TestRun.TestRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

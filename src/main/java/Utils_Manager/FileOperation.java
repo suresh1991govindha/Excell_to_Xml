@@ -14,7 +14,7 @@ public class FileOperation {
 	{
 		File directory=new File(System.getProperty("user.dir")+"\\src\\test\\resource\\Request_XML");
 		    int fileCount=directory.list().length;
-		   // System.out.println("File Count:"+fileCount);
+		    System.out.println("File Count:"+fileCount);
 		return fileCount;
 		  }
 		

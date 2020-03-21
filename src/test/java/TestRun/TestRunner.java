@@ -31,12 +31,18 @@ public class TestRunner {
 		public  void TestRun() throws Throwable {
 		
 
-		
+		   String endpoint = FileReadManager.getInstance().getCr().getEndpoint();
 			int count = FileOperation.getRequestCount();
-		
-			for (int i = 0; i < count; i++) {
+			if(count==0)
+			{
 				
-		    String endpoint = FileReadManager.getInstance().getCr().getEndpoint();
+				System.err.println("Request_XML File not Found Count:"+count);
+				Assert.assertFalse(true);
+			}else {
+			for (int i = 1; i <= count; i++) {
+				
+				
+		 
 		    File requestfile=new File(System.getProperty("user.dir")+"\\src\\test\\resource\\Request_XML\\"+i+".xml");
 		  // File requestfile=new File("C:\\Users\\rockstr\\eclipse-workspace\\exeeell\\src\\test\\resource\\Request_XML\\Request.xml");
 			HttpClient client=HttpClientBuilder.create().build();
@@ -88,7 +94,7 @@ public class TestRunner {
 		
 	
 
-	
+	}
 	
 
 
