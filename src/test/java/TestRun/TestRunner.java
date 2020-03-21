@@ -57,23 +57,24 @@ public class TestRunner {
 			
 			int statusCode = reponse.getStatusLine().getStatusCode();
 		
-			if(statusCode==200)
+			if(statusCode>200)
 			{
-			System.out.println("["+i+".xml ] STATUS= " +statusCode+ " PASS");
-			}else {
-			
-				
-				String failedXML=System.getProperty("user.dir")+"\\src\\test\\resource\\Failed_XML\\"+i+".xml";
+				String failedXML=System.getProperty("user.dir")+"\\src\\test\\resource\\Failed_XML\\Reponse"+i+".xml";
 				Reporter.log(failedXML);
 				
-				System.err.print("["+i+".xml ] STATUS= " +statusCode);	FileOperation.moveFailedXML(requestfile,i);
+				System.err.print("["+i+".xml ] STATUS= " +statusCode);	
+				
+				
+				FileOperation.moveFailedXML(requestfile,i);
 			//	System.out.println(requestfile);
+		
+			}else {
+	
+			
+				System.out.println("["+i+".xml ] STATUS= " +statusCode+ " PASS");
+			
 			}
 		
-			
-			 
-		        
-		      
 			BufferedReader br=new BufferedReader(new InputStreamReader(reponse.getEntity().getContent()));
 			String line=" ";
 			
@@ -89,6 +90,10 @@ public class TestRunner {
 			pw.write(sb.toString());
 			pw.close();
 			pw.flush();
+			 
+		        
+		      
+		
 	}}
 
 		

@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<soap:Body>
 		<AddResponse xmlns="http://tempuri.org/">
-			<AddResult>50</AddResult>
+			<AddResult>15</AddResult>
 		</AddResponse>
 	</soap:Body>
 </soap:Envelope>

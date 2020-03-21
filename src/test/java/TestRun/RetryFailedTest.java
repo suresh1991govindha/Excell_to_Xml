@@ -47,13 +47,8 @@ public class RetryFailedTest {
 		
 		int statusCode = reponse.getStatusLine().getStatusCode();
 	
-		if(statusCode==200)
+		if(statusCode>200)
 		{
-		System.out.println("["+failedXMLCount[i]+" ] STATUS= " +statusCode+ " PASS");
-		
-	
-		
-		}else {
 		
 			File failedXML = failedXMLCount[i];
 			String absolutePath = failedXML.getAbsolutePath();
@@ -61,12 +56,21 @@ public class RetryFailedTest {
 			
 		System.err.println("["+failedXMLCount[i]+" ] STATUS= " +statusCode+ " FAIL");
 		
-		}
-	
+		}else {
 		
-		 
-	        
-	      
+	
+		System.out.println("["+failedXMLCount[i]+" ] STATUS= " +statusCode+ " PASS");
+
+		//FileOperation.movePassedXML(failedXMLCount[i]);
+		
+		File pass=failedXMLCount[i];
+		String string = pass.toString();
+		int length = string.length();
+		
+		String substring = string.substring(length-12);
+		
+		//System.out.println(substring);
+	//	File des=new File(System.getProperty("user.dir")+"\\src\\test\\resource\\Response_XML\\"+substring);
 		BufferedReader br=new BufferedReader(new InputStreamReader(reponse.getEntity().getContent()));
 		String line=" ";
 		
@@ -77,11 +81,18 @@ public class RetryFailedTest {
 			sb.append( line);
 		}
 		//PrintWriter pw=new PrintWriter(in_XMLpath);
-		
-		PrintWriter pw=new PrintWriter(System.getProperty("user.dir")+"\\src\\test\\resource\\Response_XML\\Reponse"+i+".xml");
+
+		PrintWriter pw=new PrintWriter(System.getProperty("user.dir")+"\\src\\test\\resource\\Response_XML\\"+substring);
 		pw.write(sb.toString());
 		pw.close();
 		pw.flush();
+		}
+	
+		
+		 
+	        
+	      
+	
 }}
 }
 	

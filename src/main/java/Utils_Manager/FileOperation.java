@@ -54,13 +54,31 @@ public static  void moveFailedXML(File src,int i) throws IOException
 
 {
 	
-	File des=new File(System.getProperty("user.dir")+"\\src\\test\\resource\\Failed_XML\\"+i+".xml");
+	File des=new File(System.getProperty("user.dir")+"\\src\\test\\resource\\Failed_XML\\Reponse"+i+".xml");
 	
 	
 	 FileUtils.copyFile(src, des);
 	 System.err.println(" FAIL RESPONSE STORED SUCCESSFULLY --->> "+des);
 	}
 
+@Test
+public static  void movePassedXML(File src) throws IOException
+
+{
+	
+	String string = src.toString();
+	int length = string.length();
+	
+	String substring = string.substring(length-12);
+	
+	//System.out.println(substring);
+	File des=new File(System.getProperty("user.dir")+"\\src\\test\\resource\\Response_XML\\"+substring);
+
+	 FileUtils.moveFile(src, des);
+
+	
+	 System.err.println(" RetryFailedTest Passed SUCCESSFULLY --->> "+string);
+	}
 
 	public  static  File[] getFailedXMLCount()
 	{
