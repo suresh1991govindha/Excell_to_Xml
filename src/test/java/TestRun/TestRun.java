@@ -15,6 +15,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import Utilities.FileReadManager;
 import XML_update.BasicXml;
@@ -48,8 +49,15 @@ public class TestRun {
 			
 			int statusCode = reponse.getStatusLine().getStatusCode();
 			
-			Assert.assertEquals(200, statusCode);
-			 System.out.println("response recieved ="+i+" status code =" +statusCode+ " passed");
+			if(statusCode==200)
+			{
+			System.out.println(i+".xml  status code = " +statusCode+ " PASS");
+			
+			}else {
+			
+				System.out.println(i+".xml  status code = " +statusCode+ " FAIL");
+				
+			}
 			BufferedReader br=new BufferedReader(new InputStreamReader(reponse.getEntity().getContent()));
 			String line=" ";
 			
