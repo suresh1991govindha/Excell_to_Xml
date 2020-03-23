@@ -85,13 +85,7 @@ package Excel_Manager;
 					
 					}
 				
-					
-						
-						
-						
-						
-						
-						
+			
 						
 								}
 					}
