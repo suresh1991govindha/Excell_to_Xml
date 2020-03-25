@@ -4,7 +4,11 @@ package XML_Manager;
 import javax.xml.parsers.DocumentBuilderFactory;  
 import javax.xml.parsers.DocumentBuilder;  
 import org.w3c.dom.Document;  
-import org.w3c.dom.NodeList;  
+import org.w3c.dom.NodeList;
+
+import POJO.Drug_POJO;
+
+
 import org.w3c.dom.Node;  
 import org.w3c.dom.Element;  
 import java.io.File;  
@@ -12,6 +16,8 @@ public class Read_XML {
 
 public static void main(String argv[])   
 {  
+	
+	Drug_POJO obj=new Drug_POJO();
 try   
 {  
 //creating a constructor of file class and parsing an XML file  
@@ -32,20 +38,35 @@ System.out.println("\nNode Name :" + node.getNodeName());
 if (node.getNodeType() == Node.ELEMENT_NODE)   
 {  
 Element eElement = (Element) node;  
-System.out.println("DosageFormCd : "+ eElement.getElementsByTagName("DosageFormCd").item(0).getTextContent());  
-System.out.println("DosageFormType : "+ eElement.getElementsByTagName("DosageFormType").item(0).getTextContent());  
-System.out.println("DrugDefaultSig : "+ eElement.getElementsByTagName("DrugDefaultSig").item(0).getTextContent());  
-System.out.println("DrugStrength : "+ eElement.getElementsByTagName("DrugStrength").item(0).getTextContent());  
-System.out.println("DrugStrengthUOM : "+ eElement.getElementsByTagName("DrugStrengthUOM").item(0).getTextContent());  
 
-System.out.println("GPI : "+ eElement.getElementsByTagName("GPI").item(0).getTextContent());  
-System.out.println("NDC : "+ eElement.getElementsByTagName("NDC").item(0).getTextContent());  
-System.out.println("RouteOfAdminCodedVal : "+ eElement.getElementsByTagName("RouteOfAdminCodedVal").item(0).getTextContent());  
-System.out.println("SingleActiveIngredientInd : "+ eElement.getElementsByTagName("SingleActiveIngredientInd").item(0).getTextContent());  
-System.out.println("DrugClassType : "+ eElement.getElementsByTagName("DrugClassType").item(0).getTextContent());  
+obj.setColumn1(eElement.getElementsByTagName("DosageFormCd").item(0).getTextContent());
+obj.setColumn2( eElement.getElementsByTagName("DosageFormType").item(0).getTextContent());
+obj.setColumn3( eElement.getElementsByTagName("DrugDefaultSig").item(0).getTextContent());
+obj.setColumn4(eElement.getElementsByTagName("DrugStrength").item(0).getTextContent()); 
+obj.setColumn5( eElement.getElementsByTagName("DrugStrengthUOM").item(0).getTextContent());
+obj.setColumn6( eElement.getElementsByTagName("GPI").item(0).getTextContent());
+obj.setColumn7( eElement.getElementsByTagName("NDC").item(0).getTextContent());
+obj.setColumn8( eElement.getElementsByTagName("RouteOfAdminCodedVal").item(0).getTextContent());
+obj.setColumn9(eElement.getElementsByTagName("SingleActiveIngredientInd").item(0).getTextContent());
+obj.setColumn10(eElement.getElementsByTagName("DrugClassType").item(0).getTextContent());
 
+
+
+System.out.println("DosageFormCd : "+  obj.getColumn1());  
+System.out.println("DosageFormType : "+ obj.getColumn2());  
+System.out.println("DrugDefaultSig : "+ obj.getColumn3());  
+System.out.println("DrugStrength : "+   obj.getColumn4());
+System.out.println("DrugStrengthUOM : "+   obj.getColumn5());
+
+System.out.println("GPI : "+   obj.getColumn6());
+System.out.println("NDC : "+   obj.getColumn7());
+System.out.println("RouteOfAdminCodedVal : "+   obj.getColumn8());
+System.out.println("SingleActiveIngredientInd : "+    obj.getColumn9());
+System.out.println("DrugClassType : "+    obj.getColumn10());
 }  
 }  
+
+
 }   
 catch (Exception e)   
 {  

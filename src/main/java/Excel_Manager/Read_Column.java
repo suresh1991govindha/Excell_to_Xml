@@ -1,19 +1,20 @@
 package Excel_Manager;
 
 
-	import java.io.File;
-	import java.io.FileInputStream;
-	import java.io.IOException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-	import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.RichTextString;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.util.NumberToTextConverter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
-	import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import Config_manager.FileReadManager;
 
@@ -74,9 +75,16 @@ import Config_manager.FileReadManager;
 					{
 					
 				String stringCellValue = r.getCell(column).getStringCellValue();
-				//System.out.println(stringCellValue);
+			//	System.out.println(stringCellValue);
 				list.add(stringCellValue);
+				}else if(r.getCell(column).getCellTypeEnum()==CellType.BLANK)
+				{
+					RichTextString richStringCellValue = r.getCell(column).getRichStringCellValue();
+					list.add(" ");
+					//System.out.println("blank"+richStringCellValue);
+					
 				}else {
+					
 
 					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
 					 list.add(String.valueOf(numericCellValue));
@@ -208,6 +216,12 @@ import Config_manager.FileReadManager;
 			String stringCellValue = r.getCell(column).getStringCellValue();
 			//System.out.println(stringCellValue);
 			list.add(stringCellValue);
+			}else if(r.getCell(column).getCellTypeEnum()==CellType.BLANK)
+			{
+				RichTextString richStringCellValue = r.getCell(column).getRichStringCellValue();
+				list.add(" ");
+				//System.out.println("blank"+richStringCellValue);
+				
 			}else {
 
 				 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
@@ -276,6 +290,12 @@ import Config_manager.FileReadManager;
 				String stringCellValue = r.getCell(column).getStringCellValue();
 				//System.out.println(stringCellValue);
 				list.add(stringCellValue);
+				}else if(r.getCell(column).getCellTypeEnum()==CellType.BLANK)
+				{
+					RichTextString richStringCellValue = r.getCell(column).getRichStringCellValue();
+					list.add(" ");
+					//System.out.println("blank"+richStringCellValue);
+					
 				}else {
 
 					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
@@ -344,6 +364,12 @@ import Config_manager.FileReadManager;
 						String stringCellValue = r.getCell(column).getStringCellValue();
 						//System.out.println(stringCellValue);
 						list.add(stringCellValue);
+						}else if(r.getCell(column).getCellTypeEnum()==CellType.BLANK)
+						{
+							RichTextString richStringCellValue = r.getCell(column).getRichStringCellValue();
+							list.add(" ");
+							//System.out.println("blank"+richStringCellValue);
+							
 						}else {
 
 							 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
@@ -412,6 +438,12 @@ import Config_manager.FileReadManager;
 				String stringCellValue = r.getCell(column).getStringCellValue();
 			//	System.out.println("getColumn5"+stringCellValue);
 				list.add(stringCellValue);
+				}else if(r.getCell(column).getCellTypeEnum()==CellType.BLANK)
+				{
+					RichTextString richStringCellValue = r.getCell(column).getRichStringCellValue();
+					list.add(" ");
+					//System.out.println("blank"+richStringCellValue);
+					
 				}else {
 
 					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
@@ -479,6 +511,12 @@ import Config_manager.FileReadManager;
 				String stringCellValue = r.getCell(column).getStringCellValue();
 			///	System.out.println("getColumn6"+stringCellValue);
 				list.add(stringCellValue);
+				}else if(r.getCell(column).getCellTypeEnum()==CellType.BLANK)
+				{
+					RichTextString richStringCellValue = r.getCell(column).getRichStringCellValue();
+					list.add(" ");
+					//System.out.println("blank"+richStringCellValue);
+					
 				}else {
 
 					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
@@ -546,6 +584,12 @@ import Config_manager.FileReadManager;
 				String stringCellValue = r.getCell(column).getStringCellValue();
 				//System.out.println(stringCellValue);
 				list.add(stringCellValue);
+				}else if(r.getCell(column).getCellTypeEnum()==CellType.BLANK)
+				{
+					RichTextString richStringCellValue = r.getCell(column).getRichStringCellValue();
+					list.add(" ");
+					//System.out.println("blank"+richStringCellValue);
+					
 				}else {
 
 					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
@@ -614,6 +658,12 @@ import Config_manager.FileReadManager;
 				String stringCellValue = r.getCell(column).getStringCellValue();
 				//System.out.println(stringCellValue);
 				list.add(stringCellValue);
+				}else if(r.getCell(column).getCellTypeEnum()==CellType.BLANK)
+				{
+					RichTextString richStringCellValue = r.getCell(column).getRichStringCellValue();
+					list.add(" ");
+					//System.out.println("blank"+richStringCellValue);
+					
 				}else {
 
 					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
@@ -681,6 +731,12 @@ import Config_manager.FileReadManager;
 				String stringCellValue = r.getCell(column).getStringCellValue();
 				//System.out.println(stringCellValue);
 				list.add(stringCellValue);
+				}else if(r.getCell(column).getCellTypeEnum()==CellType.BLANK)
+				{
+					RichTextString richStringCellValue = r.getCell(column).getRichStringCellValue();
+					list.add(" ");
+					//System.out.println("blank"+richStringCellValue);
+					
 				}else {
 
 					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
@@ -747,6 +803,12 @@ import Config_manager.FileReadManager;
 				String stringCellValue = r.getCell(column).getStringCellValue();
 				//System.out.println(stringCellValue);
 				list.add(stringCellValue);
+				}else if(r.getCell(column).getCellTypeEnum()==CellType.BLANK)
+				{
+					RichTextString richStringCellValue = r.getCell(column).getRichStringCellValue();
+					list.add(" ");
+					//System.out.println("blank"+richStringCellValue);
+					
 				}else {
 
 					 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
