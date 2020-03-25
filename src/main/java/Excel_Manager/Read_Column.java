@@ -150,6 +150,12 @@ import Config_manager.FileReadManager;
 			String stringCellValue = r.getCell(column).getStringCellValue();
 			//System.out.println(stringCellValue);
 			list.add(stringCellValue);
+			}else if(r.getCell(column).getCellTypeEnum()==CellType.BLANK)
+			{
+				RichTextString richStringCellValue = r.getCell(column).getRichStringCellValue();
+				list.add(" ");
+				//System.out.println("blank"+richStringCellValue);
+				
 			}else {
 
 				 Long numericCellValue = (long) r.getCell(column).getNumericCellValue();
