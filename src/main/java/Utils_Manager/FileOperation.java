@@ -54,7 +54,7 @@ public static  void moveFailedXML(File src,int i) throws IOException
 
 {
 	
-	File des=new File(System.getProperty("user.dir")+"\\src\\test\\resource\\Failed_XML\\Reponse"+i+".xml");
+	File des=new File(System.getProperty("user.dir")+"\\src\\test\\resource\\Failed_XML\\"+i+".xml");
 	
 	
 	 FileUtils.copyFile(src, des);

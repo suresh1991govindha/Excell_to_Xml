@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schema.walgreens.com/icp/pharm/pharmsigservices/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:PharmSIGServiceWrapperRequest>
+         <OriginalParsedSIGToken>
+            <MiscNotes>937ea49031ff416bb7725070aaf343d7</MiscNotes>
+         </OriginalParsedSIGToken>
+         <TransmittedSIG>1 tab(s) once a week</TransmittedSIG>
+         <DrugType>
+            <DosageFormCd>59749</DosageFormCd>
+            <DosageFormType>241693</DosageFormType>
+            <DrugDefaultSig>59749002361</DrugDefaultSig>
+	            <DrugStrength>653495</DrugStrength>
+            <DrugStrengthUOM>OT</DrugStrengthUOM>
+            <GPI> </GPI>
+            <NDC> </NDC>
+            <RouteOfAdminCodedVal>32043971050</RouteOfAdminCodedVal>
+            <SingleActiveIngredientInd>1</SingleActiveIngredientInd>
+            <DrugClassType>JAMD0   </DrugClassType>
+         </DrugType>
+         <PatientType>
+            <Age>68</Age>
+            <FirstName>PATIENT</FirstName>
+         </PatientType>
+      </v1:PharmSIGServiceWrapperRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
