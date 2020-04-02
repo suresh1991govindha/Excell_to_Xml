@@ -65,12 +65,12 @@ import Utils_Manager.FileOperation;
 		    ExtentHtmlReporter htmlReporter;
 		    ExtentReports extent;
 		    ExtentTest test;
-		    
+		    public static 	String path=System.getProperty("user.dir");
 
 		  @BeforeTest
 		    public void startReport() {
 		    	
-		        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/test-output/extend-reports/RetryFailedTest.html");
+		        htmlReporter = new ExtentHtmlReporter(path+"/test-output/extend-reports/RetryFailedTest.html");
 		  	extent = new ExtentReports();
 		        extent.attachReporter(htmlReporter);
 		        htmlReporter.config().setChartVisibilityOnOpen(true);
@@ -151,7 +151,7 @@ import Utils_Manager.FileOperation;
 		}
 		//PrintWriter pw=new PrintWriter(in_XMLpath);
 
-		PrintWriter pw=new PrintWriter(System.getProperty("user.dir")+"\\src\\test\\resource\\Response_XML\\Reponse"+substring);
+		PrintWriter pw=new PrintWriter(path+"\\src\\test\\resource\\Response_XML\\Reponse"+substring);
 		pw.write(sb.toString());
 		pw.close();
 		pw.flush();

@@ -20,15 +20,15 @@ public class DButils {
 			
 				Class.forName("com.mysql.cj.jdbc.Driver");
 			
-				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","");  
+				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/student","root","root");  
 			
 			
 			Statement stmt=con.createStatement();  
-			ResultSet rs=stmt.executeQuery("SELECT * FROM employee");  
+			ResultSet rs=stmt.executeQuery("SELECT * FROM studentDetails");  
 			while(rs.next())  
 			{
 				Drug_POJO d=new Drug_POJO();
-			d.setColumn1(String.valueOf(rs.getInt(1)));
+			d.setColumn1(String.valueOf(rs.getString(1)));
 			d.setColumn2(String.valueOf(rs.getString(2)));
 			d.setColumn3(String.valueOf(rs.getString(3)));
 			d.setColumn4(String.valueOf(rs.getString(4)));

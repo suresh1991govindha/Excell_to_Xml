@@ -13,7 +13,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;  
 import java.io.File;  
 public class Read_XML {
-
+public static 	String path=System.getProperty("user.dir");
 public static void main(String argv[])   
 {  
 	
@@ -21,7 +21,7 @@ public static void main(String argv[])
 try   
 {  
 //creating a constructor of file class and parsing an XML file  
-File file = new File("C:\\Users\\rockstr\\eclipse-workspace\\exeeell\\src\\test\\resource\\input_XML\\ERx_request.xml");  
+File file = new File(path+"\\src\\test\\resource\\input_XML\\ERx_request.xml");  
 //an instance of factory that gives a document builder  
 DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();  
 //an instance of builder to parse the specified xml file  

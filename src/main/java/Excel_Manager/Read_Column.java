@@ -28,11 +28,11 @@ import Config_manager.FileReadManager;
 			  String getsheetname = FileReadManager.getInstance().getCr().getsheetname();
 			  String column0 = FileReadManager.getInstance().getCr().getColumn0();
 			
-		//HashMap< Integer,String> map=new HashMap<Integer, String>();
+		
 			
 			
 			ArrayList<String> list=new ArrayList<String>();
-			//S:\\SHARE25\\Share25-CTS_Core_Pharmacy_QA\\Core_Pharmacy\\12.Misc\\Suresh\\dd\\exeeell\\
+			
 			File file=new File(excellpath);
 			FileInputStream fis=new FileInputStream(file);
 			XSSFWorkbook workbook=new XSSFWorkbook(fis);

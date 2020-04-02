@@ -14,6 +14,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.apache.http.HeaderIterator;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -29,6 +30,7 @@ import org.testng.asserts.SoftAssert;
 
 import Config_manager.FileReadManager;
 import Utils_Manager.FileOperation;
+import Utils_Manager.GetTime;
 import XML_Manager.Excel_BasicXml;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -40,7 +42,7 @@ import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 public class TestRunner {
 
-
+	    public static 	String path=System.getProperty("user.dir");
 	    ExtentHtmlReporter htmlReporter;
 	    ExtentReports extent;
 	    ExtentTest test;
@@ -49,7 +51,7 @@ public class TestRunner {
 	  @BeforeTest
 	    public void startReport() {
 	    	
-	        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/test-output/extend-reports/TestRunner.html");
+	        htmlReporter = new ExtentHtmlReporter(path+"/test-output/extend-reports/TestRunner.html");
 	  	extent = new ExtentReports();
 	        extent.attachReporter(htmlReporter);
 	        htmlReporter.config().setChartVisibilityOnOpen(true);
@@ -78,7 +80,9 @@ public class TestRunner {
 				
 				
 		 
-		    File requestfile=new File(System.getProperty("user.dir")+"\\src\\test\\resource\\Request_XML\\"+i+".xml");
+		    File requestfile=new File(path+"\\src\\test\\resource\\Request_XML\\"+i+".xml");
+		    
+		   
 		  // File requestfile=new File("C:\\Users\\rockstr\\eclipse-workspace\\exeeell\\src\\test\\resource\\Request_XML\\Request.xml");
 			HttpClient client=HttpClientBuilder.create().build();
 			
@@ -90,14 +94,15 @@ public class TestRunner {
 			
 			HttpResponse reponse=client.execute(post);
 			
+			
 			int statusCode = reponse.getStatusLine().getStatusCode();
 		
 			if(statusCode>200)
 			{
-				String failedXML=System.getProperty("user.dir")+"\\src\\test\\resource\\Failed_XML\\Reponse"+i+".xml";
+				String failedXML=path+"\\src\\test\\resource\\Failed_XML\\Reponse"+i+".xml";
 				Reporter.log(failedXML);
 				
-				System.err.print("["+i+".xml ] STATUS= " +statusCode);	
+				System.err.print("["+i+".xml ]"+GetTime.getCurrentTime()+ " STATUS :"+statusCode+" FAIL");	
 				
 				
 				FileOperation.moveFailedXML(requestfile,i);
@@ -108,12 +113,14 @@ public class TestRunner {
 			}else {
 	
 			
-				System.out.println("["+i+".xml ] STATUS= " +statusCode+ " PASS");
+				System.out.println("["+i+".xml ] "+GetTime.getCurrentTime() +" STATUS :" +statusCode+ " PASS");
 				test = extent.createTest(" Test Case ["+i+".xml ] STATUS  ", "PASSED test case");
 			
 				  test.log(Status.PASS, MarkupHelper.createLabel(" PASSED ", ExtentColor.GREEN));
 			}
 		
+
+			
 			BufferedReader br=new BufferedReader(new InputStreamReader(reponse.getEntity().getContent()));
 			String line=" ";
 			
@@ -123,7 +130,7 @@ public class TestRunner {
 			{
 				sb.append( line);
 			}
-			PrintWriter pw=new PrintWriter(System.getProperty("user.dir")+"\\src\\test\\resource\\Response_XML\\Reponse"+i+".xml");
+			PrintWriter pw=new PrintWriter(path+"\\src\\test\\resource\\Response_XML\\Reponse"+i+".xml");
 			
 		//	PrintWriter pw=new PrintWriter(System.getProperty("user.dir")+"\\src\\test\\resource\\Response_XML\\Reponse.xml");
 			pw.write(sb.toString());

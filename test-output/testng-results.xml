@@ -1,36 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[C:\Users\rockstr\eclipse-workspace\RTE\src\test\resource\Failed_XML\Reponse2.xml]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6009" started-at="2020-03-26T14:13:05Z" finished-at="2020-03-26T14:13:11Z">
+  <suite name="Default suite" duration-ms="7922" started-at="2020-04-02T09:41:29Z" finished-at="2020-04-02T09:41:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6009" started-at="2020-03-26T14:13:05Z" finished-at="2020-03-26T14:13:11Z">
-      <class name="TestRun.RetryFailedTest">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:TestRun.RetryFailedTest@4bee09]" name="startReport" is-config="true" duration-ms="268" started-at="2020-03-26T14:13:05Z" finished-at="2020-03-26T14:13:06Z">
+    <test name="Default test" duration-ms="7922" started-at="2020-04-02T09:41:29Z" finished-at="2020-04-02T09:41:37Z">
+      <class name="TestRun.TestRunner">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:TestRun.TestRunner@4bee09]" name="startReport" is-config="true" duration-ms="145" started-at="2020-04-02T09:41:29Z" finished-at="2020-04-02T09:41:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="TestRun()[pri:0, instance:TestRun.RetryFailedTest@4bee09]" name="TestRun" duration-ms="5330" started-at="2020-03-26T14:13:06Z" finished-at="2020-03-26T14:13:11Z">
+        <test-method status="PASS" signature="TestRun()[pri:0, instance:TestRun.TestRunner@4bee09]" name="TestRun" duration-ms="7477" started-at="2020-04-02T09:41:30Z" finished-at="2020-04-02T09:41:37Z">
           <reporter-output>
+            <line>
+              <![CDATA[C:\Users\rockstr\eclipse-workspace\RTE\src\test\resource\Failed_XML\Reponse2.xml]]>
+            </line>
           </reporter-output>
         </test-method> <!-- TestRun -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:TestRun.RetryFailedTest@4bee09]" name="getResult" is-config="true" duration-ms="3" started-at="2020-03-26T14:13:11Z" finished-at="2020-03-26T14:13:11Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:TestRun.TestRunner@4bee09]" name="getResult" is-config="true" duration-ms="4" started-at="2020-04-02T09:41:37Z" finished-at="2020-04-02T09:41:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestRun status=SUCCESS method=RetryFailedTest.TestRun()[pri:0, instance:TestRun.RetryFailedTest@4bee09] output={null}]]]>
+                <![CDATA[[TestResult name=TestRun status=SUCCESS method=TestRunner.TestRun()[pri:0, instance:TestRun.TestRunner@4bee09] output=C:\Users\rockstr\eclipse-workspace\RTE\src\test\resource\Failed_XML\Reponse2.xml]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:TestRun.RetryFailedTest@4bee09]" name="tearDown" is-config="true" duration-ms="380" started-at="2020-03-26T14:13:11Z" finished-at="2020-03-26T14:13:11Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:TestRun.TestRunner@4bee09]" name="tearDown" is-config="true" duration-ms="273" started-at="2020-04-02T09:41:37Z" finished-at="2020-04-02T09:41:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- TestRun.RetryFailedTest -->
+      </class> <!-- TestRun.TestRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

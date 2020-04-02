@@ -18,13 +18,13 @@ package Excel_Manager;
 		//Identify Testcases coloum by scanning the entire 1st row
 		//once coloumn is identified then scan entire testcase coloum to identify purcjhase testcase row
 		//after you grab purchase testcase row = pull all the data of that row and feed into test
-		
+		public 	String path=System.getProperty("user.dir");
 		public ArrayList<String> getData(String testcaseName) throws IOException
 		{
 			//fileInputStream argument
 					ArrayList<String> a=new ArrayList<String>();
 					
-					FileInputStream fis=new FileInputStream("C://Users//rahul//Documents//demodata.xlsx");
+					FileInputStream fis=new FileInputStream(path+"\\src\\test\\resource\\input_Excell\\test data.xlsx");
 					XSSFWorkbook workbook=new XSSFWorkbook(fis);
 					
 					int sheets=workbook.getNumberOfSheets();

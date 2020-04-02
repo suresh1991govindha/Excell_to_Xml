@@ -20,7 +20,7 @@ public class Write_Row {
 
     private static String[] columns = {"Name", "Email", "Date Of Birth", "Salary"};
     private static List<Employee> employees =  new ArrayList<Employee>();
-
+    public static 	String path=System.getProperty("user.dir");
 // Initializing employees data to insert into the excel file
    
    
@@ -95,7 +95,7 @@ public class Write_Row {
         }
 
         // Write the output to a file
-        FileOutputStream fileOut = new FileOutputStream("C:\\Users\\rockstr\\eclipse-workspace\\exceltoEXCEL\\src\\test\\resource\\output_Excell\\poi-generated-file.xlsx");
+        FileOutputStream fileOut = new FileOutputStream(path+"\\src\\test\\resource\\output_Excell\\poi-generated-file.xlsx");
         workbook.write(fileOut);
         fileOut.close();
 

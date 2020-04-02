@@ -58,7 +58,7 @@ public static  void moveFailedXML(File src,int i) throws IOException
 	
 	
 	 FileUtils.copyFile(src, des);
-	 System.err.println(" FAIL RESPONSE STORED SUCCESSFULLY --->> "+des);
+	 System.err.println("  --->> "+des);
 	}
 
 @Test

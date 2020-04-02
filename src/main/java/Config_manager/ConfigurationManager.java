@@ -11,11 +11,12 @@ package Config_manager;
 
 			
 	public Properties ps;
-		
+	public 	String path=System.getProperty("user.dir");
+	
 		public ConfigurationManager() throws Throwable {
 			//C:\Users\rockstr\eclipse-workspace\exeeell\config.properties
 			try {
-				File fs = new File(System.getProperty("user.dir")+"\\config.properties");
+				File fs = new File(path+"\\config.properties");
 				FileInputStream fileInput = new FileInputStream(fs);
 				ps = new Properties();
 				ps.load(fileInput);
@@ -40,30 +41,38 @@ package Config_manager;
 			if (in_XMLpath==null) {
 				System.out.println("in_XMLpath is Not Found");
 			}
-			return in_XMLpath;
+			return path+in_XMLpath;
 		}
 		
 		public String getResponse_XML() {
+			;
+			String currPath="\\src\\test\\resource\\Request_XML";
 			String Response_XML = ps.getProperty("Response_XML");
 			if (Response_XML==null) {
 				System.out.println("Response_XML is Not Found");
 			}
-			return Response_XML;
+			return path+Response_XML;
 		}
 		
 		public String getRequest_XML() {
+			
+
+		
+			String currPath="\\src\\test\\resource\\Request_XML";
 			String Request_XML = ps.getProperty("Request_XML");
 			if (Request_XML==null) {
 				System.out.println("Request_XML is Not Found");
 			}
-			return Request_XML;
+			return path+Request_XML;
 		}
 		public String getExcellpath() {
+			
+			String currPath="\\src\\test\\resource\\Response_XML\\";
 			String Excellpath = ps.getProperty("Excellpath");
 			if (Excellpath==null) {
 				System.out.println("Excellpath is Not Found");
 			}
-			return Excellpath;
+			return path+Excellpath;
 		}
 		
 		public String getsheetname() {
